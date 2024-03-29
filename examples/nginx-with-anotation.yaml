@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-with-anotation
+  labels:
+    stage-learn: anotation
+  annotations:
+    environment: production
+    team: finance
+    version: 1.2.3
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80
