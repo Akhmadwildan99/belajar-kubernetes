@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: nodejs-job-node-selector
+spec:
+  completions: 4
+  parallelism: 2
+  template:
+    spec:
+      nodeSelector:
+        cpu: "true"
+      restartPolicy: Never
+      containers:
+        - name: nodejs-job
+          image: akhmadwildan/nodejs-job
