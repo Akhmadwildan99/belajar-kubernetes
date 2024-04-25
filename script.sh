@@ -4,3 +4,5 @@ kubectl get all
 kubectl delete all --all
 kubectl delete configmaps namaconfigmap
 kubectl delete secret namasecret
+kubectl rollout history deployment namadeployment
+kubectl rollout undo deployment namadeployment
