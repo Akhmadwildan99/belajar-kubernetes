@@ -1,11 +1,10 @@
 # Build image
 docker build -t akhmadwildan/nodejs-web:2 .
-
 # Push container
 docker push akhmadwildan/nodejs-web:2
 
 # Create container
-docker container create --name nodejs-web:2 akhmadwildan/nodejs-web:2
+docker container create --name nodejs-web-2 akhmadwildan/nodejs-web:2
 
 # Start container
 docker container start nodejs-web:2
